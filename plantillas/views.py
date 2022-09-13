@@ -5,6 +5,8 @@ def simple(request):
 
 def dinamico(request,name):
     #El contexto es un diccionario
-    contexto = {'name' : name}
+    #Se podrían pasar objetos y por lo sus métodos.
+    categories = ['code','design','seo','business']
+    contexto = {'name' : name,'categories': categories}
     return render(request,'dinamico.html',contexto)
     
